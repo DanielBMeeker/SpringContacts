@@ -60,7 +60,7 @@ public class WebController {
 	 }
 
 	 repo.save(c);
-	 model.addAttribute("contacts", repo.findAll());
+	 model.addAttribute("contact", repo.findAll());
 	return "results";
 	}
 	
@@ -71,7 +71,7 @@ public class WebController {
 	 .orElseThrow(() -> new
 	IllegalArgumentException("Invalid user Id:" + id));
 	 repo.delete(c);
-	 model.addAttribute("contacts", repo.findAll());
+	 model.addAttribute("contact", repo.findAll());
 	return "results";
 	}
 }
